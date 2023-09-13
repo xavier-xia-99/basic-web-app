@@ -18,3 +18,20 @@ describe("QueryProcessor", () => {
           ));
     });
 });
+
+
+describe("QueryProcessor", () => {
+    test("should return a string", () => {
+        const query = "test";
+        const response: string = QueryProcessor(query);
+        expect(typeof response).toBe("string");
+    });
+
+    test('should return andrew id description', () => {
+        const query = "andrew id";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "boxia"
+          ));
+    });
+});
